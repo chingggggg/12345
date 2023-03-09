@@ -1,34 +1,36 @@
 <style>
 	#result1{
-		background-image: url(https://img.kpopmap.com/680x384/2022/08/monsta-x-no-limit-seoul_cover-image.jpg);
-		background-size: 100px 100px;
-		background-color:lightpink;
-		width: 100px;
-		height: 100px;
-	}
-	#result2 {background-image: url(https://res.heraldm.com/content/image/2022/04/27/20220427000575_0.jpg);
 		background-size: 300px 300px;
-		background-color:skybe;
+		background-color:lightpink;
+        width: 300px;
+		height: 300px;
+		font-weight: bold;
+		font-size: 50px;
+	}
+	#result2 {
+		background-size: 300px 300px;
+		background-color:skyblue;
 		width: 300px;
 		height: 300px;
+		font-weight: bold;
+		font-size: 50px;
 	}
 </style>
 
-<DIV ID ='result1'>
-
-</DIV>
-
-<div id="result2">
-
+<div  id="result1">
 </div>
 
+<div id="result2">
+</div>
 
 
 <script>
 let message ="hello";
-document.querySelector("#result").innerText = message;
-let x = 1;
-let y = 5;
-let z = x<2;
+
+let x = "芒叉";
+let y = "萌貝貝";
+document.querySelector("#result1").innerText = x;
+document.querySelector("#result2").innerText = y;
+
 
 </script>
