@@ -39,10 +39,10 @@
 <script>
 let message ="hello";
 
-let x = "seventeen";
-let y = "carat";
-document.querySelector("#result1").innerText = x;
-document.querySelector("#result2").innerText = y;
+let x = "seventeen <img src='https://preview.redd.it/io6tq13x4u161.jpg?width=640&crop=smart&auto=webp&s=2e69262ce2e0c3a0a091b8dfed810f1bd5ccfff7' width='150 height='150'>";
+let y = "carat <img src='https://cf.shopee.tw/file/a1d8f3c260e9f57fd80e4947f5b58bb9' width ='150' height ='150'>";
+document.querySelector("#result1").innerHTML = x;
+document.querySelector("#result2").innerHTML = y;
 
 function show(){
 	let result_x = document.querySelector("#x").value;
