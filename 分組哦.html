@@ -44,7 +44,7 @@ div img {
 
  
 <div class= "korea"> SEVENTEEN
-   <img src="https://www.5music.com.tw/cdpic/zn2/220221155367.jpg" width="200" height="200">
+   <img id="SEVENTEEN_img" src="https://www.5music.com.tw/cdpic/zn2/220221155367.jpg" width="200" height="200">
    <video width="400" controls>
     <source src="SEVENTEEN (세븐틴).mp4" type="video/mp4"> //要下載影片or上傳雲端
   Your browser does not support HTML video.
@@ -56,17 +56,17 @@ Your browser does not support the audio element.
  </div>
 
 <div class= "korea"> INFINITE
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy597ttrM5Ej6V9uuEHjiv88PcS5WDYw1X2WaVAT0H_OJEmly96QAnhSyvP4h5qZ_1cY&usqp=CAU" width="200" height="200">
+  <img id="INFINITE_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy597ttrM5Ej6V9uuEHjiv88PcS5WDYw1X2WaVAT0H_OJEmly96QAnhSyvP4h5qZ_1cY&usqp=CAU" width="200" height="200">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/TM-gCW45YHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  </div>
  
 <div class= "japan"> Nqrse
-   <img src="https://media.tenor.com/VwdU12MjfqAAAAAC/utaite-nqrse.gif" width="200" height="200">
+   <img id=Nqrse_img src="https://media.tenor.com/VwdU12MjfqAAAAAC/utaite-nqrse.gif" width="200" height="200">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/B5ZOFzCOm3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  </div>
 
 <div class= "japan"> Meychan
-    <img src="https://i.scdn.co/image/ab67616d00001e0215f758d4c006afe3b72f8f59" width="200" height="200">
+    <img id=MEYCHAN_img src="https://i.scdn.co/image/ab67616d00001e0215f758d4c006afe3b72f8f59" width="200" height="200">
     <video width="400" controls>
     <source src="waterdrop.mp4" type="video/mp4">
   Your browser does not support HTML video.
@@ -75,6 +75,44 @@ Your browser does not support the audio element.
 
 <h1>My First CSS Example</h1>
 <p>This is a paragraph.</p>
+
+<script>
+  let SEVENTEENs = ['https://www.5music.com.tw/cdpic/zn2/220221155367.jpg','https://s.newtalk.tw/album/news/626/6123680c09ffc.jpg','https://www.mtv.com.tw/uploads/files/19490/conversions/%E6%91%98%E8%87%AA%E6%8E%A8%E7%89%B9SEVENTEEN-%E6%97%A5%E6%96%871st-EPDREAM-xl.jpeg','https://imgur.dcard.tw/H8LDkFEh.jpg'];
+  let INFINITEs = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy597ttrM5Ej6V9uuEHjiv88PcS5WDYw1X2WaVAT0H_OJEmly96QAnhSyvP4h5qZ_1cY&usqp=CAU','https://upload.wikimedia.org/wikipedia/zh/b/b6/INFINITE_For_You.jpg','https://cdn.shopify.com/s/files/1/0247/0871/0485/products/a4fd54c1b8972c82a2ae52f40032d49bd0acdcb5216821e296f6557306ed3148.jpg?v=1623974831','https://s.yimg.com/ny/api/res/1.2/39Gc61WumtCwE4rV6wP5kg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTU4MDtoPTgzOQ--/https://media.zenfs.com/ko_KR/News/starnn/20140521132346_537c2a51de13f_1.jpg'];
+  let NQRSEs = ['https://media.tenor.com/VwdU12MjfqAAAAAC/utaite-nqrse.gif','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Bk1ODh-AwPHRyf_5knFl2JDZ7aVZWbosvk7EW5o1ZGOBBie2AZgqwSySYs_j8OH7IzE&usqp=CAU','https://obs.line-scdn.net/0hKjYHf6HcFEVkMQIa2fFrEipsEiodUg5NDkkDfxFnHmsRXQNFDEsFdBZpGC0ZXE9ODSwESxNlORIrQydqKgEIfEVNTHBKUhRqMDIuajNzSWlJBlMWWlRdK0U5Sn0bCVcVX1AeIhQ3TyBPCFU/small','https://yt3.googleusercontent.com/WQG3Iy0STTvifAQ4Ch3jEYXv6yNQphMY48CjxyTABrhvKfHpS2mJX3973tl1CIf1Ql5UpOXabw=s900-c-k-c0x00ffffff-no-rj'];
+  let MEYCHANs = ['https://i.scdn.co/image/ab67616d00001e0215f758d4c006afe3b72f8f59','https://stickershop.line-scdn.net/stickershop/v1/product/13106330/LINEStorePC/main.png','https://yt3.googleusercontent.com/ytc/AL5GRJWru_yHQDO9x9AK_zluhOMlMDV1NsN6VbkyLXfKFw=s900-c-k-c0x00ffffff-no-rj','https://images.genius.com/96fb6066f3a9c16d4676ca45ba7a86ee.400x400x1.jpg'];
+
+  let count = 0;
+  setInterval(
+    function () {
+     document.querySelector("#SEVENTEEN_img").src = SEVENTEENs[count%4];
+     count = count+1;// body...
+    },
+    3000
+    );
+    setInterval(
+    function () {
+     document.querySelector("#INFINITE_img").src = INFINITEs[count%4];
+     count = count+1;// body...
+    },
+    3000
+    );
+    setInterval(
+    function () {
+     document.querySelector("#Nqrse_img").src = NQRSEs[count%4];
+     count = count+1;// body...
+    },
+    3000
+    );
+    setInterval(
+    function () {
+     document.querySelector("#MEYCHAN_img").src = MEYCHANs[count%4];
+     count = count+1;// body...
+    },
+    3000
+    );
+
+  </script>
 
 </body>
 </html>
