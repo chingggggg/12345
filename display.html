@@ -16,7 +16,7 @@
     		height: 200px;
     	}
     	.japan, .korea, .America {
-    		display: inline-block;
+    		display: none;
     	}
     </style> 
 
@@ -25,30 +25,46 @@
 <body>
     <button onclick="hide();">隱藏文字</button>
     <button onclick="show();">顯示文字</button>
-    <button onclick="hideN();">Nqrse蹦下</button>
-    <button onclick="showN();">Nqrse蹦上</button>
 
 	<div class="news_title">
-         讓我們歡迎......<br/>
-         Nqrse!!!!!
+      <h1>Nqrse</hi>
+      	<p>Nqrse是來自長崎的niconico動畫rapper，參與歌手和VOCALOIDP和協作，各種各樣的企劃參加等。
+      	<button onclick="showN();">Nqrse蹦上</button>
+      	<button onclick="hideN();">Nqrse蹦下</button>     
+        <div class="bands">
+	     <div class="Nqrse japan">
+		   <img src="https://media.tenor.com/VwdU12MjfqAAAAAC/utaite-nqrse.gif" width="200" height="200">
+	     </div>
+         <buttom class="Nqrse japan">
+		   <img src="https://i.scdn.co/image/ab6761610000e5eba54d2db873ff6136f80c1e37" width="100" height="100">
+	     </button>
+
+	     </div>
+      	</p>
 	</div>
 
-	<div class="bands">
-	 <div class="Nqrse japan">
-		<img src="https://media.tenor.com/VwdU12MjfqAAAAAC/utaite-nqrse.gif" width="200" height="200">
-	 </div>
-     <buttom class="Nqrse japan">
-		<img src="https://i.scdn.co/image/ab6761610000e5eba54d2db873ff6136f80c1e37" width="100" height="100">
-	 </button>
-     <div class ="soraru japan">
+	<div class="news_title">
+      <h1>Big Naughty</hi>
+       <p>本名：徐東鉉，韓國饒舌歌手，從16歲開始唱RAP，因為看了SHOW ME THE MONEY 5BewhY拿下冠軍後掀起的熱潮覺得很帥，自己也很想嘗試做這樣的音樂就開始了。<br/>
+2019年參加Hiphop選秀節目Show Me The Money第八季，以充滿個性的Singing Rap受到大眾矚目。<br/>
+朴載範參加在漢江公園舉辦的音樂慶典時，公開了徐東鉉簽約H1GHR MUSIC的消息
+        <button onclick="showBigN();">頑皮欸</button>
+        <button onclick="hideBigN();">頑皮回家</button>
+         <div class="bands">
+	     <div class="BigNaughty korea">
+		    <img src="https://image.kpopmap.com/2021/12/BIG-Naughty.jpg">
+	     </div>
+	     <div class="BigNaughty korea">
+		    <img src="https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/bnb_main.jpg">
+	     </div>
+	   </p>
+	</div>
+
+    <div class ="soraru japan">
 		<img src="https://media.tenor.com/9L75WzzY8tsAAAAM/soraru-after-the-rain.gif" width="200" height="200">
 	 </div>
 	</div>
 
-    <div class="bands">
-	 <div class="BIG-Naughty korea">
-		<img src="https://image.kpopmap.com/2021/12/BIG-Naughty.jpg">
-	 </div>
 	 <div class="PH1 korea">
 		<img src="https://www.mirrormedia.com.tw/assets/images/20230113135050-c16f06fb198f1cb4f368299d5ef9f4a0-tablet.jpg">
 	 </div>
@@ -69,7 +85,7 @@
 			document.querySelector(".news_title").style.display="none";
 		}
 		function show(){
-			document.querySelector(".news_title").style.display="block";
+			document.querySelector(".news_title").style.display="inline-block";
 		}
 		function hideN(){
 			let elements = document.querySelectorAll(".Nqrse");
@@ -80,7 +96,20 @@
 		function showN(){
 			let elements = document.querySelectorAll(".Nqrse");
 			for (let i= 0; i< elements.length; i=i+1){
-				elements[i].style.display="block";
+				elements[i].style.display="inline-block";
+			}
+		}
+
+		function hideBigN(){
+			let elements = document.querySelectorAll(".BigNaughty");
+			for (let i = 0; i < elements.length; i=i+1){
+				elements[i].style.display="none";
+			} 
+		}
+		function showBigN(){
+			let elements = document.querySelectorAll(".BigNaughty");
+			for (let i= 0; i< elements.length; i=i+1){
+				elements[i].style.display="inline-block";
 			}
 		}
 	</script>
