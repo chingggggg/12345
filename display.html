@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>顯示與隱藏</title>
+</head>
+
+<body>
+    <button onclick="hide();">隱藏文字</button>
+    <button onclick="show();">顯示文字</button>
+    <button onclick="hideN();">Nqrse消失</button>
+    <button onclick="showN();">Nqrse蹦出</button>
+
+	<div class="news_title">
+         讓我們歡迎......<br/>
+         Nqrse!!!!!
+	</div>
+	<div class="Nqrse">
+		<img src="https://media.tenor.com/VwdU12MjfqAAAAAC/utaite-nqrse.gif" width="200" height="200">
+	</div>
+
+	<buttom class="Nqrse">
+		<img src="https://i.scdn.co/image/ab6761610000e5eba54d2db873ff6136f80c1e37" width="100" height="100">
+	</button>
+
+	<script type="text/javascript">
+		function hide(){
+			document.querySelector(".news_title").style.display="none";
+		}
+		function show(){
+			document.querySelector(".news_title").style.display="block";
+		}
+		function hideN(){
+			let elements = document.querySelectorAll(".Nqrse");
+			for (let i = 0; i < elements.length; i=i+1){
+				elements[i].style.display="none";
+			} 
+		}
+		function showN(){
+			let elements = document.querySelectorAll(".Nqrse");
+			for (let i= 0; i< elements.length; i=i+1){
+				elements[i].style.display="block";
+			}
+		}
+	</script>
+</body>
+
+</html>
