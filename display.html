@@ -19,15 +19,38 @@
     		display: none;
     	}
 
+    .backgroundimage{
+      height: 150vh;
+      width: 210vw;
+      background-size: cover;
+      background-image: url(https://obs.line-scdn.net/0hcNWFycXIPGFqPyo4yrNDNk1gMhBZXWVfVVk4bk1qPzkaBjJIDS1yeARHJC4iZz1IIwNyBEw3Y1RPB3hyVwx1Vxo6MAI/w720);
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+      }  	
+
+      .backgroundimage video{
+      	width: 100vw;
+      	height: 100vh;
+      }
+
     	body{
     		font-family: 標楷體;
     		font-size:20px;
     	}
+
     </style> 
 
 </head>
 
 <body>
+  <div class="backgroundimage">
+  	<video>
+  		<source src="Hunt.mp4" type="video/mp4">
+  	</video>
+  </div>
+
     <button onclick="hide();">隱藏文字</button>
     <button onclick="show();">顯示文字</button>
 
