@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <script src="https://d3js.org/d3.v4.js"></script>
-   <style>
-     .row_image img{
-       width:200px;
-       heigh:auto;
-     }
-   </style>
+<head>
+	<script src="https://d3js.org/d3.v4.js"></script>
+  <style>
+    .row_image img{
+      width: 200px;
+      height: auto;
+    }
+    
+    .row {
+      background-color:rgba(227,220,200,0.5);
+      border: solid 3px black;
+      }
+    
+    h1 {
+      font-size:40px;
+    }
+    h2 {
+      font-size: 25px;
+      font-family:標楷體;}
+  </style>
 </head>
 <body>
 
 <div class="main"></div>
 <script>
-d3.csv("413.csv",function(data){
-  for(let i=0; i<data.length; i=i+1){
-    document.querySelector(".main").innerHTML= document.querySelector(".main").innerHTML+
-    "<div class='row'>" + 
-       "<h1>"+ data[i]['actor']+ "</h1>"+
-       "<div class='row_content'>"+ data[i]['content']+"</div>" +
-             	"<div class='row_image'>"+ "<img src='"+ data[i]['image']+ "'>" + "</div>"+                                   
-  </div>";
+d3.csv("413.csv", function(data){
+  for(let i = 0 ; i < data.length ; i = i+1) {
+    	document.querySelector(".main").innerHTML = document.querySelector(".main").innerHTML +
+                    "<div class='row' style='background-color:" + data[i]['color'] + "'>" +
+                        "<h1>" + data[i]['actor'] + "</h1>" + 
+                        "<h2>" + data[i]['title'] + "</h2>" +
+                        "<div class='row_content'>" + data[i]['content'] + "</div>" + 
+                        "<div class='row_image'>" +
+                            "<img src='" + data[i]['image'] + "'>"+
+                        "</div>" + 
+                    "</div>";
   }
 
 });
-
 </script>
 
 </body>
 </html>
-
